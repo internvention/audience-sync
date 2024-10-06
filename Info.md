@@ -98,20 +98,21 @@ By focusing exclusively on AI-powered features and Microsoft Fabric integration,
 
 ## Microsoft Fabric Hackathon - https://microsoftfabric.devpost.com/
 ### Tracks
-    - Microsoft Fabric + AI Innovation
-        - A solution that solves a real world problem with Microsoft Fabric by implementing any concept or collection of concepts related to Artificial Intelligence. 
-        - This could include a document analysis service that uses AI Skills or an Azure OpenAI based solution to implement a retrieval augmented generation architecture, training and deployment of a custom object detection model, anomaly detection, predictive forecasting, or any other modern application of AI within Microsoft Fabric.
 
-    - Real-Time Intelligence in Microsoft Fabric
-        - A solution that uses Real-Time Intelligence (RTI) in Microsoft Fabric  to solve a real world problem. 
-        - RTI is all about data integration, so showcasing how you can use RTI to integrate data from multiple sources and make real-time decisions based on that data is key. Any good RTI solution would include real-time data processing, real-time analytics, real-time monitoring, real-time alerting, or any other real-time application within Microsoft Fabric. 
-        - Using RTI as a source of data for your AI application is also a great way to showcase the power of RTI. Showcasing open-source integrations like Apache Kafka or AMQP, and showing cross-cloud or hybrid cloud integrations is also a plus, but not required.
+- Microsoft Fabric + AI Innovation
+    - A solution that solves a real world problem with Microsoft Fabric by implementing any concept or collection of concepts related to Artificial Intelligence. 
+    - This could include a document analysis service that uses AI Skills or an Azure OpenAI based solution to implement a retrieval augmented generation architecture, training and deployment of a custom object detection model, anomaly detection, predictive forecasting, or any other modern application of AI within Microsoft Fabric.
 
-    - Azure Database for PostgreSQL Integration
-        - A real-world solution that uses Azure Database for PostgreSQL as an OLTP main transactional database and the transactional data has to be offloaded to Fabric for near real-time analytics. This could involve using Event streaming connector for Azure Database for PostgreSQL or other techniques such as Dataflows (Gen2), Notebooks, or Data Factory Pipelines. Data landing in Fabric can be used in near real-time intelligent scenarios such as anomaly detection, predictive maintenance and other predictive scenarios, or personalized recommendations amongst others.
+- Real-Time Intelligence in Microsoft Fabric
+    - A solution that uses Real-Time Intelligence (RTI) in Microsoft Fabric  to solve a real world problem. 
+    - RTI is all about data integration, so showcasing how you can use RTI to integrate data from multiple sources and make real-time decisions based on that data is key. Any good RTI solution would include real-time data processing, real-time analytics, real-time monitoring, real-time alerting, or any other real-time application within Microsoft Fabric. 
+    - Using RTI as a source of data for your AI application is also a great way to showcase the power of RTI. Showcasing open-source integrations like Apache Kafka or AMQP, and showing cross-cloud or hybrid cloud integrations is also a plus, but not required.
 
-    - SQL And AI Integration
-        - A real-world solution that is built on Microsoft Fabric that leverages Azure SQL Database or SQL Server, and augmented by AI capabilities. This could involve using Mirroring, Eventstream's Change Data Capture (CDC) Connector for Azure SQL DB, or using ingestion techniques such as Dataflows (Gen2), Notebooks, Data Factory Pipelines, and AI-driven analytics and insights.
+- Azure Database for PostgreSQL Integration
+    - A real-world solution that uses Azure Database for PostgreSQL as an OLTP main transactional database and the transactional data has to be offloaded to Fabric for near real-time analytics. This could involve using Event streaming connector for Azure Database for PostgreSQL or other techniques such as Dataflows (Gen2), Notebooks, or Data Factory Pipelines. Data landing in Fabric can be used in near real-time intelligent scenarios such as anomaly detection, predictive maintenance and other predictive scenarios, or personalized recommendations amongst others.
 
-    - Azure Cosmos DB + Microsoft Fabric Integration
-        - A real-world solution that is built on Microsoft Fabric, leveraging Azure Cosmos DB. This could involve using Mirroring for enabling analytics/BI on Cosmos DB data, Eventstream's Change Data Capture (CDC) Connector for Cosmos DB, or using ingestion techniques such as Dataflows (Gen2), or Data Factory Pipelines.
+- SQL And AI Integration
+    - A real-world solution that is built on Microsoft Fabric that leverages Azure SQL Database or SQL Server, and augmented by AI capabilities. This could involve using Mirroring, Eventstream's Change Data Capture (CDC) Connector for Azure SQL DB, or using ingestion techniques such as Dataflows (Gen2), Notebooks, Data Factory Pipelines, and AI-driven analytics and insights.
+
+- Azure Cosmos DB + Microsoft Fabric Integration
+    - A real-world solution that is built on Microsoft Fabric, leveraging Azure Cosmos DB. This could involve using Mirroring for enabling analytics/BI on Cosmos DB data, Eventstream's Change Data Capture (CDC) Connector for Cosmos DB, or using ingestion techniques such as Dataflows (Gen2), or Data Factory Pipelines.
