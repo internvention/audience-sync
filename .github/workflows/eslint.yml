@@ -35,8 +35,10 @@ jobs:
         run: npm ci
 
       - name: Run ESLint
-        run: npx eslint . --format json --output-file eslint-report.json
-        continue-on-error: true
+        id: eslint
+        run: |
+          npx eslint "**/*.{js,jsx,ts,tsx}" --format json --output-file eslint-report.json || true
+          echo "ESLINT_EXIT_CODE=$?" >> $GITHUB_ENV
 
       - name: Upload ESLint report
         uses: actions/upload-artifact@v3
@@ -47,18 +49,21 @@ jobs:
       - name: Check ESLint results
         id: eslint-check
         run: |
-          errors=$(jq '.length' eslint-report.json)
-          if [ $errors -gt 0 ]; then
-            echo "eslint_failed=true" >> $GITHUB_OUTPUT
-          fi
+          errors=$(jq '[.[] | select(.severity == 2)] | length' eslint-report.json)
+          warnings=$(jq '[.[] | select(.severity == 1)] | length' eslint-report.json)
+          echo "ERRORS=$errors" >> $GITHUB_ENV
+          echo "WARNINGS=$warnings" >> $GITHUB_ENV
 
-      - name: Notify on ESLint errors
-        if: steps.eslint-check.outputs.eslint_failed == 'true'
+      - name: Notify Slack
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          text: ESLint found errors in the code. Please check the report.
-          author_name: ESLint Check
+          fields: repo,message,commit,author,action,eventName,ref,workflow
+          text: |
+            ESLint Check Results:
+            Errors: ${{ env.ERRORS }}
+            Warnings: ${{ env.WARNINGS }}
+            Exit Code: ${{ env.ESLINT_EXIT_CODE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
