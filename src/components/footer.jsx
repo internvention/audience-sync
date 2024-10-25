@@ -3,6 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
     return (
         <footer className="bg-gray-800 text-white py-12 px-4 md:px-20">
+            <h2 className='font-mono font-bold text-blue-500 text-3xl mb-4'>Audience Sync</h2>
             <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Product</h3>
